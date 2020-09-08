@@ -1,0 +1,64 @@
+.RegisterForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 500px;
+    height: 450px;
+    color: black;
+    background-color: burlywood;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 10px;
+}
+
+.RegisterForm:hover {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    animation-duration: 10s;
+    border-left: 8px solid black;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.RegisterBox {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.divh1Register {
+        position: relative;
+        text-align: center;
+        color: rgb(211, 119, 54);
+        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-weight: bold;
+        animation-name: RegisterH1Animation;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        /* animation-direction: alternate; */
+    }
+    
+    @keyframes RegisterH1Animation {
+        0% {
+            left: 0px;
+            top: 0px;
+        }
+        25% {
+            left: 80px;
+            top: 0px;
+        }
+        50% {
+            left: 0px;
+            top: 0px;
+        }
+        75% {
+            left: -80px;
+            top: 0px;
+        }
+        100% {
+            left: 0px;
+            top: 0px;
+        }
+    }

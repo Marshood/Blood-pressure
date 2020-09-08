@@ -1,0 +1,142 @@
+body {
+    background-image: url("https://images.pexels.com/photos/583846/pexels-photo-583846.jpeg?cs=srgb&dl=pexels-jessica-lewis-583846.jpg&fm=jpg");
+    opacity: 0.9;
+    background-size: cover;
+}
+
+.loginForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 500px;
+    height: 450px;
+    color: black;
+    background-color: burlywood;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 5px 10px;
+}
+
+.loginForm:hover {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    animation-duration: 10s;
+    border-left: 8px solid black;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.LoginBox {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.35em 4.5em;
+    border-radius: 12em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #6b2e2e;
+    text-align: center;
+}
+
+.button:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+}
+
+#Username {
+    color: chocolate;
+    text-align: center;
+}
+
+#Password {
+    color: chocolate;
+    text-align: center;
+}
+
+input:focus {
+    background-color: blanchedalmond;
+    border: 3px solid rgb(194, 195, 139)
+}
+
+.AlertBox {
+    position: relative;
+    width: 300px;
+    height: 30px;
+    color: rgba(15, 9, 9, 0.479);
+    justify-content: center;
+    font-weight: bold;
+    background-color: rgb(238, 11, 11);
+    margin: auto;
+    margin-top: 35%;
+    border-radius: 10px;
+    box-shadow: 3px 3px rgba(248, 59, 59, 0.479);
+    /* display: none; */
+    animation-name: AlertBoxAnamition;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes AlertBoxAnamition {
+    0% {
+        background-color: red;
+        box-shadow: 3px 3px rgba(248, 59, 59, 0.479);
+        color: black;
+    }
+    25% {
+        background-color: rgb(211, 119, 54);
+        box-shadow: 3px 3px rgb(238, 181, 141);
+        color: red;
+    }
+    50% {
+        background-color: rgb(211, 165, 13);
+        box-shadow: 3px 3px rgba(236, 169, 120, 0.897);
+        color: yellow;
+    }
+    100% {
+        background-color: rgb(211, 119, 54);
+        box-shadow: 3px 3px rgb(144, 135, 128);
+        color: white;
+    }
+}
+
+.divh1 {
+    position: relative;
+    text-align: center;
+    color: rgb(211, 119, 54);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-weight: bold;
+    animation-name: LoginH1Animation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+}
+
+@keyframes LoginH1Animation {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        left: 80px;
+        top: 0px;
+    }
+    50% {
+        left: 0px;
+        top: 0px;
+    }
+    75% {
+        left: -80px;
+        top: 0px;
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+    }
+}
