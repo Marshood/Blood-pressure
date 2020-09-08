@@ -86,10 +86,10 @@ export default function Login() {
             .then(data => {
                 console.log('Success:', data[0].success);
                 if (data[0].success) {//true
-                    alert("hola")
+                    // alert("hola")
                 }
                 else {
-                    alert("aa")
+                    alert("try again")
  
                 }
             })
