@@ -14,6 +14,7 @@ import {
 export default function Login() {
     let history = useHistory();
     const [testUseEffect, setTestUseEffect] = useState();
+    const [systolic,setSystolic]=useState();
     useEffect(() => {
  
     }, [testUseEffect]);
@@ -32,17 +33,17 @@ export default function Login() {
                         <div>
                             <label htmlFor="uname"><b>systolic:</b></label>
                             <br></br>
-                            <input type="number" id="systolic" placeholder="systolic" name="systolic" required />
+                            <input type="number" id="systolic" placeholder="systolic" name="systolic"  value={systolic} required />
                         </div>
                         <div>
                             <label htmlFor="psw"><b>diastolic:</b></label>
                             <br></br>
-                            <input type="number" id="diastolic" placeholder="diastolic" name="diastolic" required />
+                            <input type="number" id="diastolic" placeholder="diastolic" name="diastolic"  value={systolic}  required />
                         </div>
                         <div>
                             <label htmlFor="psw"><b>Heart rate:</b></label>
                             <br></br>
-                            <input type="number" id="HeartRate" placeholder="Heart rate" name="HeartRate" required />
+                            <input type="number" id="HeartRate" placeholder="Heart rate" name="HeartRate"  value={systolic}  required />
                         </div>
                         <br></br>
                         <input className="button" type="submit" value="Send Result"></input>
@@ -81,7 +82,7 @@ export default function Login() {
         })
             .then(response => response.json())
             .then(data => {
-                
+                 setSystolic('');
             })
             .catch((error) => {
                 console.error('Error:', error);
