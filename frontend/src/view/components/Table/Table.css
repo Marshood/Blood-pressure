@@ -101,13 +101,5 @@ th div { margin-top: -20px; position: absolute; }
     width: 200px;
     height: 200px;
   }
-  .TableToShow {
-    position: absolute;
-    background-color: rgb(4, 172, 238);
-    text-align: center;
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    border: 3px solid #ddd;
-   
-  }
+  
 }
