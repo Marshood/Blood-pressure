@@ -24,6 +24,8 @@ export default function Login() {
         <div>
             <div className='TableForm' >
                 <body>
+             
+                    <div className="TableToShow">
                     <div className="">
                         <br></br>
                         <select name="SelectDadMom" onChange={(e) => getNewData(e)}>
@@ -35,7 +37,6 @@ export default function Login() {
                             history.push('/MainPage')
                         }}> Back</button>
                     </div>
-                    <div className="TableToShow">
                         <table  className="table" >
                             <thead className="header__table">
                                 <tr>
