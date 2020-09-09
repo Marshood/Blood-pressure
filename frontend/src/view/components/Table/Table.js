@@ -17,8 +17,7 @@ export default function Login() {
             .then((res) => res.json())
             .then((data) => {
                 let doc = data;
-                console.log(doc[0]);
-                setTDataForTable(doc[0]);
+                 setTDataForTable(doc[0]);
             });
     }, []);
     return (
@@ -37,7 +36,7 @@ export default function Login() {
                         }}> Back</button>
                     </div>
                     <div className="TableToShow">
-                        <table>
+                        <table  className="table" >
                             <thead className="header__table">
                                 <tr>
                                     <th scope="col"> Dad/Mom </th>
@@ -48,7 +47,7 @@ export default function Login() {
                                     <th scope="col"> Time </th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody className="tbody">
                                 {DataForTable.map((data, index) => (
                                     <tr key={index}>
                                         <td> {data.radio} </td>

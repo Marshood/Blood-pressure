@@ -15,8 +15,7 @@ export default function Login() {
     let history = useHistory();
     const [testUseEffect, setTestUseEffect] = useState();
     useEffect(() => {
-        // alert("test state useeffect")
-
+ 
     }, [testUseEffect]);
     return (
         <body>
@@ -63,13 +62,11 @@ export default function Login() {
 
     function SaveToDB(e) {
         e.preventDefault();
-        console.log("SaveToDB",);
-        let systolic = e.target.systolic.value;
+         let systolic = e.target.systolic.value;
         let diastolic = e.target.diastolic.value;
         let HeartRate = e.target.HeartRate.value;
         let radio = e.target.gender.value;
-        console.log(systolic, diastolic, HeartRate, "radio ", radio)
-        fetch('/addBloodPressure', {
+         fetch('/addBloodPressure', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -84,14 +81,7 @@ export default function Login() {
         })
             .then(response => response.json())
             .then(data => {
-                console.log('Success:', data[0].success);
-                if (data[0].success) {//true
-                    // alert("hola")
-                }
-                else {
-                    alert("try again")
- 
-                }
+                
             })
             .catch((error) => {
                 console.error('Error:', error);
