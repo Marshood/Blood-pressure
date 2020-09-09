@@ -22,7 +22,7 @@ const User = mongoose.model('User', {
 
 const BloodPressure = mongoose.model('BloodPressure', {
 
-    systolic: String, diastolic: String, HeartRate: String, radio: String, Date: String, Time: String
+    systolic: String, diastolic: String, HeartRate: String, radio: String,Oxygensaturation:String, Date: String, Time: String
 });
 
  
@@ -66,8 +66,8 @@ app.put('/AddUser', function (req, res) {
 })
 app.post('/addBloodPressure', function (req, res) {
     console.log("SaveToDB...");
-    const { systolic, diastolic, HeartRate, radio } = req.body;
-    let newBloodPressureData = new BloodPressure({ radio: radio, systolic: systolic, diastolic: diastolic, HeartRate: HeartRate, Date: new Date().toLocaleDateString(), Time: new Date().toLocaleTimeString() });
+    const { systolic, diastolic, HeartRate, radio,Oxygensaturation } = req.body;
+    let newBloodPressureData = new BloodPressure({ radio: radio, systolic: systolic, diastolic: diastolic, HeartRate: HeartRate,Oxygensaturation:Oxygensaturation, Date: new Date().toLocaleDateString(), Time: new Date().toLocaleTimeString() });
 
     newBloodPressureData.save().then(docs => { console.log('save to DB....') });
 

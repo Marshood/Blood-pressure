@@ -43,6 +43,7 @@ export default function Login() {
                                     <th scope="col"> systolic </th>
                                     <th scope="col"> diastolic </th>
                                     <th scope="col"> Heart rate </th>
+                                    <th scope="col"> Oxygen saturation </th>
                                     <th scope="col"> Date </th>
                                     <th scope="col"> Time </th>
                                 </tr>
@@ -54,6 +55,7 @@ export default function Login() {
                                         <td> {data.systolic} </td>
                                         <td> {data.diastolic} </td>
                                         <td> {data.HeartRate} </td>
+                                        <td> {data.Oxygensaturation} </td>
                                         <td> {data.Date} </td>
                                         <td> {data.Time} </td>
                                     </tr>

@@ -12,11 +12,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 530px;
-  height: 530px;
+  /* width: 530px; */
+  /* height: 530px; */
   /* auto */
   color: black;
-  background-color: burlywood;
+  /* background-color: burlywood; */
   margin: auto;
   border-radius: 10px;
   box-shadow: 5px 10px;
@@ -44,12 +44,13 @@
 }
 
 .TableToShow {
+  position: initial;
   background-color: rgb(4, 172, 238);
   text-align: center;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   border: 3px solid #ddd;
-  width: auto;
+ 
 }
 
 .TableToShow td, .TableToShow th {
@@ -94,3 +95,19 @@ tbody {
 /* scrolltable rules */
 table  { margin-top:  20px; display: inline-block; overflow: auto; }
 th div { margin-top: -20px; position: absolute; }
+ 
+@media only screen and (max-width: 600px) {
+  .TableForm {
+    width: 200px;
+    height: 200px;
+  }
+  .TableToShow {
+    position: absolute;
+    background-color: rgb(4, 172, 238);
+    text-align: center;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 3px solid #ddd;
+   
+  }
+}

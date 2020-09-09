@@ -19,31 +19,40 @@ export default function Login() {
  
     }, [testUseEffect]);
     return (
-        <body>
-            <div className='loginForm'>
+        <body className="body">
+            <div className='MainPageForm'>
                 <div className="divh1">Blood pressure<br></br></div>
                 <div className="LoginBox">
                     <form onSubmit={(e) => SaveToDB(e)}>
                         <div>
+                            <div>
                             <input type="radio" id="male" name="gender" value="Dad" required />
-                            <label htmlFor="male">Dad</label>
+                            <label htmlFor="male">حنا</label>
+                            </div>
+                            <div>
                             <input type="radio" id="female" name="gender" value="Mom" required />
-                            <label htmlFor="female">Mom</label>
+                            <label htmlFor="female">مريم</label>
+                            </div>
                         </div>
                         <div>
-                            <label htmlFor="uname"><b>systolic:</b></label>
+                            <label htmlFor="uname"><b>الضغط العالي</b></label>
                             <br></br>
                             <input type="number" id="systolic" placeholder="systolic" name="systolic"  value={systolic} required />
                         </div>
                         <div>
-                            <label htmlFor="psw"><b>diastolic:</b></label>
+                            <label htmlFor="psw"><b>الضغط الواطي</b></label>
                             <br></br>
                             <input type="number" id="diastolic" placeholder="diastolic" name="diastolic"  value={systolic}  required />
                         </div>
                         <div>
-                            <label htmlFor="psw"><b>Heart rate:</b></label>
+                            <label htmlFor="psw"><b>دقات القلب</b></label>
                             <br></br>
                             <input type="number" id="HeartRate" placeholder="Heart rate" name="HeartRate"  value={systolic}  required />
+                        </div>
+                        <div>
+                            <label htmlFor="psw"><b>نسبه الأكسجين </b></label>
+                            <br></br>
+                            <input type="number" id="Oxygensaturation " placeholder="Oxygensaturation" name="Oxygensaturation"  value={systolic}  required />
                         </div>
                         <br></br>
                         <input className="button" type="submit" value="Send Result"></input>
@@ -67,6 +76,7 @@ export default function Login() {
         let diastolic = e.target.diastolic.value;
         let HeartRate = e.target.HeartRate.value;
         let radio = e.target.gender.value;
+        let Oxygensaturation=e.target.Oxygensaturation.value;
          fetch('/addBloodPressure', {
             method: 'POST',
             headers: {
@@ -77,7 +87,8 @@ export default function Login() {
                     systolic: systolic,
                     diastolic: diastolic,
                     HeartRate: HeartRate,
-                    radio: radio
+                    radio: radio,
+                    Oxygensaturation:Oxygensaturation
                 })
         })
             .then(response => response.json())
